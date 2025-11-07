@@ -19,4 +19,4 @@ Features a responsive glass-style container, animated background, adjustable opt
 
 # Preview
 
-![Password Generator Preview](./preview.png)
+![Password Generator Preview](./Preview.png)
