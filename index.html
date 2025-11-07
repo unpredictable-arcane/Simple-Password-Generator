@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="animated-bg"></div>
+  <div class="blob a" aria-hidden="true"></div>
+  <div class="blob b" aria-hidden="true"></div>
+
+  <main class="card" role="main" aria-labelledby="title">
+    <div>
+      <h1 id="title">Unique Password Generator</h1>
+      <p class="subtitle">Create secure, unique passwords fast. Uses crypto API for randomness.</p>
+    </div>
+
+    <div class="display" id="passwordDisplay">
+      <span id="pwdText">-- Your password will appear here --</span>
+      <button class="ghost" id="copyBtn">Copy</button>
+    </div>
+
+    <div class="controls">
+      <div class="col">
+        <label for="length">Length: <span id="lenVal">16</span></label>
+        <input id="length" type="range" min="6" max="64" value="16" />
+      </div>
+
+      <div class="checkboxes">
+        <label class="ch"><input type="checkbox" id="lower" checked /> Lowercase</label>
+        <label class="ch"><input type="checkbox" id="upper" checked /> Uppercase</label>
+        <label class="ch"><input type="checkbox" id="numbers" checked /> Numbers</label>
+        <label class="ch"><input type="checkbox" id="symbols" checked /> Symbols</label>
+      </div>
+
+      <div class="row">
+        <button id="generate" class="primary">Generate</button>
+        <button id="saveBtn" class="ghost">Regenerate</button>
+      </div>
+
+      <div>
+        <div class="small">Strength</div>
+        <div class="strength"><i id="strengthBar"></i></div>
+        <div class="small" id="strengthText">—</div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
